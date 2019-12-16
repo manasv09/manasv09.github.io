@@ -930,6 +930,21 @@ pre code {
   color: lightgreen;
 }
 
+.main-article .wrap-content .column {
+  float: left;
+  width: 25%;
+  padding: 5px;
+
+}
+
+/* Clear floats after image containers */
+.main-article .wrap-content .row {
+  content: "";
+  clear: both;
+  display: table;
+  /*margin-left: 6rem*/
+}
+
 img.post-image, img.page-img {
   width: 100%;
 }
@@ -1054,17 +1069,4 @@ img.post-image, img.page-img {
   }
 }
 
-.column {
-  float: left;
-  width: 25%;
-  padding: 5px;
 
-}
-
-/* Clear floats after image containers */
-.row {
-  content: "";
-  clear: both;
-  display: table;
-  /*margin-left: 6rem*/
-}
