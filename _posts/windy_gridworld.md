@@ -1,3 +1,8 @@
+---
+layout: post
+title: Windy Gridworld
+permalink: /windy_gridworld/
+---
 # Windy Gridworld
 
 This program solves the famous windy gridworld problem where the goal is to reach the end cell from a starting cell but there is a wind flowing in a direction for certian cells and hence transitions are stochastic.

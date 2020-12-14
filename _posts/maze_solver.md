@@ -1,3 +1,8 @@
+---
+layout: post
+title: Maze Solver
+permalink: /maze_solver/
+---
 # Maze Solver
 
 This program solves a \(n\times n\) maze with a starting cell and which can have multiple end cells. This program aims to find the shortest path from start cell to end cell.

@@ -1,3 +1,8 @@
+---
+layout: post
+title: SAT-Solver
+permalink: /sat_solver/
+---
 # SAT-SOLVER
 
 <!-- - Author: Manas Vashistha -->
