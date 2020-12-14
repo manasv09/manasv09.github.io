@@ -13,10 +13,10 @@ permalink: /projects/
 ### Key Projects
 
 - [Deep Image Prior]()
-- [Maze Solver](../_posts/maze_solver.md)
-- [Windy Gridworld](../_posts/windy_gridworld.md)
+- [Genre Classifier](/gc/)
+- [Windy Gridworld](/windy_gridworld/)
 
 ### Other Projects
 
-- [Maze Solver](../_posts/maze_solver.md)
-- [SAT Solver](../_posts/sat_solver.md)
+- [Maze Solver](/maze_solver/)
+- [SAT Solver](/sat_solver/)
