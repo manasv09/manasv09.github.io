@@ -5,7 +5,7 @@ permalink: /maze_solver/
 ---
 # Maze Solver
 
-This program solves a \(n\times n\) maze with a starting cell and which can have multiple end cells. This program aims to find the shortest path from start cell to end cell.
+This program solves a $$n\times n$$ maze with a starting cell and which can have multiple end cells. This program aims to find the shortest path from start cell to end cell.
 
 - The maze is assumed to consist of \(n_T\) cells in total, out of which \(n_1\) cells have value 1 (wall tiles) and others have value either \(0,\,2,\text{ or }3\). 
 
