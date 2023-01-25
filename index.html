@@ -11,8 +11,16 @@ title: Homepage
       <p align="justify">Hi!! You have reached <b> "Manas Vashistha"</b>. Feel free to wander around and explore.</p>
 
 
-      <p align = "justify">I am an undergraduate at the Indian Institute of Technology Bombay (IITB). I am fundamentally interested in the field of machine learning and its applications. Most of my projects include applications of Computer Vision and Deep Learning. I am a vegetarian but, that does not make me anything less than a foodie. I plan on travelling all over the world. That was a short intro, you can know more about me <a href="{{"/about/" | prepend: site.baseurl}}">here</a>.</p>
-      <center><h4 style="font-weight: 200; opacity: 0.6;"> “Stay Hungry. Stay Foolish.”<br> <p align="right">-Steve Jobs</p></center>
+      <p align="justify">I completed my Dual Degree (B.Tech + M.Tech) from the Indian Institute of Technology Bombay
+        (IITB). I am fundamentally
+        interested in the field of machine learning and its applications. Most of my projects include applications of
+        Computer Vision and Deep Learning. That was a short intro, you can know more about me <a href="{{" /about/" |
+          prepend: site.baseurl}}">here</a>.</p>
+      <!-- <br>I am a vegetarian but, that does not make me anything less than a foodie. I plan on travelling all over the world.  -->
+      <center>
+        <h4 style="font-weight: 200; opacity: 0.6;"> “Stay Hungry. Stay Foolish.”<br>
+          <p align="right">-Steve Jobs</p>
+      </center>
   </div>
 </article>
 
@@ -20,22 +28,27 @@ title: Homepage
   <div class="wrap-content">
     <header class="header-article">
       <h2 class="title-article">Recent Work</h2>
-    <p>Here are the results from an implementation of the famous CVPR paper <a href="https://sites.skoltech.ru/app/data/uploads/sites/25/2018/04/deep_image_prior.pdf">Deep Image Prior</a>.</p>
-     <div class="row">
-          <div class="column">
-            <img class="pre-image" src={{ "/assets/img/lena_start.jpg" | prepend: site.baseurl | append: post.img }} alt = "Lena-Start">
-          </div>
-          <div class="column">
-            <img class="pre-image" src={{ "/assets/img/lena_final.jpg" | prepend: site.baseurl | append: post.img }} alt = "Lena-Final">
-          </div>
-          <div class="column">
-            <img class="pre-image" src={{ "/assets/img/start.jpg" | prepend: site.baseurl | append: post.img }} alt = "Barbara-Start" >
-          </div>
-          <div class="column">
-            <img class="pre-image" src={{ "/assets/img/final.jpg" | prepend: site.baseurl | append: post.img }} alt = "Barbara-Final" >
-          </div>
+      <p>Here are the results from an implementation of the famous CVPR paper <a
+          href="https://sites.skoltech.ru/app/data/uploads/sites/25/2018/04/deep_image_prior.pdf">Deep Image Prior</a>.
+      </p>
+      <div class="row">
+        <div class="column">
+          <img class="pre-image" src={{ "/assets/img/lena_start.jpg" | prepend: site.baseurl | append: post.img }}
+            alt="Lena-Start">
         </div>
-        <p align="justify">More projects can be found <a href="{{"/projects/" | prepend: site.baseurl}}">here</a>.</p>
+        <div class="column">
+          <img class="pre-image" src={{ "/assets/img/lena_final.jpg" | prepend: site.baseurl | append: post.img }}
+            alt="Lena-Final">
+        </div>
+        <div class="column">
+          <img class="pre-image" src={{ "/assets/img/start.jpg" | prepend: site.baseurl | append: post.img }}
+            alt="Barbara-Start">
+        </div>
+        <div class="column">
+          <img class="pre-image" src={{ "/assets/img/final.jpg" | prepend: site.baseurl | append: post.img }}
+            alt="Barbara-Final">
+        </div>
+      </div>
+      <!-- <p align="justify">More projects can be found <a href="{{"/projects/" | prepend: site.baseurl}}">here</a>.</p> -->
   </div>
 </article>
-
