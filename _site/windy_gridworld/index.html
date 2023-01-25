@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- MathJax -->
+<script type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<head>
+	<meta charset="utf-8">
+	<title>Windy Gridworld - Manas Vashistha</title>
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="/assets/img/favicon/favicon.png" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-touch-icon-114x114.png">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#2d2a2a">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#2d2a2a">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#2d2a2a">
+
+	<link href="https://fonts.googleapis.com/css?family=Finger+Paint|PT+Sans:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+
+  <aside class="sidebar">
+
+  <div class="sidebar-container">
+    <div class="sidebar-logo">
+      <a href="/" class="logo">Manas Vashistha</a>
+      <br>
+      <li class="headings">Programmer | Tinkerer | Engineer</li>
+    </div>
+
+    <menu class="sidebar-menu">
+      <li class="menu-items"><a class="menu-links" href="/">Home</a></li>
+      <li class="menu-items"><a class="menu-links" href="/about/">About</a></li>
+      <li class="menu-items"><a class="menu-links" href="/projects/">Projects</a></li>
+      <li class="menu-items"><a class="menu-links" href="/cv.pdf"
+          onclick="var w=window.open(this.href, '_blank'); (w.onload=function(){w.document.title='CV - Manas Vashistha';})(); return false;">CV</a>
+      </li>
+      <li class="menu-items"><a class="menu-links" href="/contact/">Contact</a></li>
+      <!-- <li class="menu-items"><a class="menu-links" href="https://easydebugandroid.blogspot.com/">Blog</a></li> -->
+    </menu>
+
+    <div class="sidebar-social">
+      <li class="social-items"><a href="https://www.linkedin.com/in/vashisthamanas" class="social-links"
+          title="LinkedIn"><i class="social-icons fa fa-linkedin" aria-hidden="true"></i></a></li>
+      <li class="social-items"><a href="https://github.com/manasv09" class="social-links" title="Github"><i
+            class="social-icons fa fa-github" aria-hidden="true"></i></a></li>
+      <!-- <li class="linkedin">
+        <a href="https://www.linkedin.com/in/vashisthamanas" class="social-links" title="LinkedIn">
+          <i class="social-icons fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li> -->
+      <!-- <li class="github">
+        <a href="https://github.com/manasv09" class="social-links" title="Github">
+          <i class="social-icons fab fa-github" aria-hidden="true"></i>
+        </a>
+      </li> -->
+      <!-- <li class="social-items"><a href="https://easydebugandroid.blogspot.com/" class="social-links" title="Blogger"><i class="social-icons fab fa-blogger" aria-hidden="true"></i></a></li> -->
+
+    </div>
+
+  </div>
+</aside>
+
+  <main role="main">
+    <div class="content">
+      <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+  type="text/javascript"></script>
+<article class="page-article">
+  <div class="wrap-content">
+    <header class="page-header">
+      <h1 class="page-title">Windy Gridworld</h1>
+      <div class="page-date"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+    </header>
+    <div class="page-content">
+      
+      <h1 id="windy-gridworld">Windy Gridworld</h1>
+
+<p>This program solves the famous windy gridworld problem where the goal is to reach the end cell from a starting cell but there is a wind flowing in a direction for certian cells and hence transitions are stochastic.</p>
+
+<p>There can be either 4 or 8 (King’s case) moves allowed from a cell.</p>
+
+<p>This problem can be solved using SARSA, Expected-SARSA or Q-Learning. The problem can be approached in the following manner.</p>
+
+<ul>
+  <li>
+    <p>The origin is assumed to be on the top left of the grid. X-axis is horizontally right and y-axis is vertically downwards.</p>
+  </li>
+  <li>
+    <p>States are numbered in column major order, total states = <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mi mathvariant="normal">_</mi><mi>r</mi><mi>o</mi><mi>w</mi><mi>s</mi><mo>×</mo><mi>n</mi><mi mathvariant="normal">_</mi><mi>c</mi><mi>o</mi><mi>l</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">n\_rows \times n\_cols</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8933em;vertical-align:-0.31em;"></span><span class="mord mathnormal">n</span><span class="mord" style="margin-right:0.02778em;">_</span><span class="mord mathnormal">ro</span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="mord mathnormal">s</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.0044em;vertical-align:-0.31em;"></span><span class="mord mathnormal">n</span><span class="mord" style="margin-right:0.02778em;">_</span><span class="mord mathnormal">co</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">s</span></span></span></span>.</p>
+  </li>
+  <li>
+    <p>Actions are <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mn>0</mn><mo separator="true">,</mo><mtext>  </mtext><mn>1</mn><mo separator="true">,</mo><mtext>  </mtext><mn>2</mn><mo separator="true">,</mo><mtext>  </mtext><mn>3</mn><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[0,\;1,\;2,\;3]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">3</span><span class="mclose">]</span></span></span></span> for <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mi>N</mi><mo separator="true">,</mo><mtext>  </mtext><mi>E</mi><mo separator="true">,</mo><mtext>  </mtext><mi>S</mi><mo separator="true">,</mo><mtext>  </mtext><mi>W</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[N,\;E,\;S,\;W]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="mclose">]</span></span></span></span> in baseline case and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mn>0</mn><mo separator="true">,</mo><mtext>  </mtext><mn>1</mn><mo separator="true">,</mo><mtext>  </mtext><mn>2</mn><mo separator="true">,</mo><mtext>  </mtext><mn>3</mn><mo separator="true">,</mo><mtext>  </mtext><mn>4</mn><mo separator="true">,</mo><mtext>  </mtext><mn>5</mn><mo separator="true">,</mo><mtext>  </mtext><mn>6</mn><mo separator="true">,</mo><mtext>  </mtext><mn>7</mn><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[0,\;1,\;2,\;3,\;4,\;5,\;6,\;7]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">3</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">4</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">5</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">6</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">7</span><span class="mclose">]</span></span></span></span> for <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">[</mo><mi>N</mi><mo separator="true">,</mo><mtext>  </mtext><mi>N</mi><mi>E</mi><mo separator="true">,</mo><mtext>  </mtext><mi>E</mi><mo separator="true">,</mo><mtext>  </mtext><mi>S</mi><mi>E</mi><mo separator="true">,</mo><mtext>  </mtext><mi>S</mi><mo separator="true">,</mo><mtext>  </mtext><mi>S</mi><mi>W</mi><mo separator="true">,</mo><mtext>  </mtext><mi>W</mi><mo separator="true">,</mo><mtext>  </mtext><mi>N</mi><mi>W</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">[N,\;NE,\;E,\;SE,\;S,\;SW,\;W,\;NW]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">NE</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">SE</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="mclose">]</span></span></span></span> for King’s moves. Reward for every transition is -1.</p>
+  </li>
+  <li>
+    <p>If a perimeter wall is encountered, the agent moves to the adjacent cell of the wall.</p>
+  </li>
+  <li>
+    <p>We get the following results with our approach.</p>
+  </li>
+</ul>
+
+<p><img src="/_pages/task2.png" alt="task2" /></p>
+
+<p><img src="/_pages/task3.png" alt="task3" /></p>
+
+<p><img src="/_pages/task4.png" alt="task4" /></p>
+
+<p><img src="/_pages/task5.png" alt="task5" /></p>
+
+    </div>
+  </div>
+</article>
+    </div>
+  </main>
+
+</body>
+</html>

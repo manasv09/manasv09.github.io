@@ -25,5 +25,6 @@ This program solves a $$n\times n$$ maze with a starting cell and which can have
 
 - The solution obtained can then be visualized on the maze.
 
-![gridFile](gridFile.png)
-![gridFile_solved](gridFile_solved.png)
+
+![gridFile](/_pages/gridFile.png)
+![gridFile_solved](/_pages/gridFile_solved.png)

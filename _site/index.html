@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- MathJax -->
+<script type="text/javascript"
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <head>
 	<meta charset="utf-8">
 	<title>Homepage - Manas Vashistha</title>
@@ -30,28 +35,42 @@
   <div class="sidebar-container">
     <div class="sidebar-logo">
       <a href="/" class="logo">Manas Vashistha</a>
-      <br><li class = "headings">Programmer | Tinkerer | Engineer</li>
+      <br>
+      <li class="headings">Programmer | Tinkerer | Engineer</li>
     </div>
 
     <menu class="sidebar-menu">
       <li class="menu-items"><a class="menu-links" href="/">Home</a></li>
       <li class="menu-items"><a class="menu-links" href="/about/">About</a></li>
       <li class="menu-items"><a class="menu-links" href="/projects/">Projects</a></li>
-      <li class="menu-items"><a class="menu-links" href="/cv.pdf" onclick="var w=window.open(this.href, '_blank'); (w.onload=function(){w.document.title='CV - Manas Vashistha';})(); return false;">CV</a></li>
+      <li class="menu-items"><a class="menu-links" href="/cv.pdf"
+          onclick="var w=window.open(this.href, '_blank'); (w.onload=function(){w.document.title='CV - Manas Vashistha';})(); return false;">CV</a>
+      </li>
       <li class="menu-items"><a class="menu-links" href="/contact/">Contact</a></li>
-      <li class="menu-items"><a class="menu-links" href="https://easydebugandroid.blogspot.com/">Blog</a></li>
+      <!-- <li class="menu-items"><a class="menu-links" href="https://easydebugandroid.blogspot.com/">Blog</a></li> -->
     </menu>
 
     <div class="sidebar-social">
-      <li class="social-items"><a href="https://www.linkedin.com/in/vashisthamanas" class="social-links" title="LinkedIn"><i class="social-icons fab fa-linkedin" aria-hidden="true"></i></a></li>
-      <li class="social-items"><a href="https://github.com/manasv09" class="social-links" title="Github"><i class="social-icons fab fa-github" aria-hidden="true"></i></a></li>
-      <li class="social-items"><a href="https://easydebugandroid.blogspot.com/" class="social-links" title="Blogger"><i class="social-icons fab fa-blogger" aria-hidden="true"></i></a></li>
+      <li class="social-items"><a href="https://www.linkedin.com/in/vashisthamanas" class="social-links"
+          title="LinkedIn"><i class="social-icons fa fa-linkedin" aria-hidden="true"></i></a></li>
+      <li class="social-items"><a href="https://github.com/manasv09" class="social-links" title="Github"><i
+            class="social-icons fa fa-github" aria-hidden="true"></i></a></li>
+      <!-- <li class="linkedin">
+        <a href="https://www.linkedin.com/in/vashisthamanas" class="social-links" title="LinkedIn">
+          <i class="social-icons fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li> -->
+      <!-- <li class="github">
+        <a href="https://github.com/manasv09" class="social-links" title="Github">
+          <i class="social-icons fab fa-github" aria-hidden="true"></i>
+        </a>
+      </li> -->
+      <!-- <li class="social-items"><a href="https://easydebugandroid.blogspot.com/" class="social-links" title="Blogger"><i class="social-icons fab fa-blogger" aria-hidden="true"></i></a></li> -->
 
     </div>
 
   </div>
 </aside>
-
 
   <main role="main">
     <div class="content">
@@ -59,12 +78,19 @@
   <div class="wrap-content">
     <header class="header-article">
 
-      <!-- <h2 class="title-article">Know Me!!</h2> -->
-      <p align="justify">Hi! I'm <b> Manas</b>. Welcome to my webpage.</p>
+      <h2 class="title-article">Know Me!!</h2>
+      <p align="justify">Hi!! You have reached <b> "Manas Vashistha"</b>. Feel free to wander around and explore.</p>
 
 
-      <p align = "justify">I am an undergraduate at the Indian Institute of Technology Bombay (IITB). I am interested in the field of machine learning and its applications. Most of my projects are in the field of Deep Learning and Computer Vision. I am a vegetarian but, that does not make me anything less than a foodie. I plan on travelling all over the world. You can know more about me <a href="/about/">here</a>.</p>
-      <center><h4 style="font-weight: 200; opacity: 0.6;"> “Stay Hungry. Stay Foolish.”<br> <p align="right">-Steve Jobs</p></center>
+      <p align="justify">I completed my Dual Degree (B.Tech + M.Tech) from the Indian Institute of Technology Bombay
+        (IITB) in 2022. I am fundamentally
+        interested in the field of machine learning and its applications. Most of my projects include applications of
+        Computer Vision and Deep Learning. That was a short intro, you can know more about me <a href=" /about/">here</a>.</p>
+      <!-- <br>I am a vegetarian but, that does not make me anything less than a foodie. I plan on travelling all over the world.  -->
+      <center>
+        <h4 style="font-weight: 200; opacity: 0.6;"> “Stay Hungry. Stay Foolish.”<br>
+          <p align="right">-Steve Jobs</p>
+      </center>
   </div>
 </article>
 
@@ -72,26 +98,30 @@
   <div class="wrap-content">
     <header class="header-article">
       <h2 class="title-article">Recent Work</h2>
-    <p>Here are the results from an implementation of the famous CVPR paper <a href="https://sites.skoltech.ru/app/data/uploads/sites/25/2018/04/deep_image_prior.pdf">Deep Image Prior</a>.</p>
-     <div class="row">
-          <div class="column">
-            <img class="pre-image" src=/assets/img/lena_start.jpg alt = "Lena-Start">
-          </div>
-          <div class="column">
-            <img class="pre-image" src=/assets/img/lena_final.jpg alt = "Lena-Final">
-          </div>
-          <div class="column">
-            <img class="pre-image" src=/assets/img/start.jpg alt = "Barbara-Start" >
-          </div>
-          <div class="column">
-            <img class="pre-image" src=/assets/img/final.jpg alt = "Barbara-Final" >
-          </div>
+      <p>Here are the results from an implementation of the famous CVPR paper <a
+          href="https://sites.skoltech.ru/app/data/uploads/sites/25/2018/04/deep_image_prior.pdf">Deep Image Prior</a>.
+      </p>
+      <div class="row">
+        <div class="column">
+          <img class="pre-image" src=/assets/img/lena_start.jpg
+            alt="Lena-Start">
         </div>
-        <p align="justify">More projects can be found <a href="/Projects/">here</a>.</p>
+        <div class="column">
+          <img class="pre-image" src=/assets/img/lena_final.jpg
+            alt="Lena-Final">
+        </div>
+        <div class="column">
+          <img class="pre-image" src=/assets/img/start.jpg
+            alt="Barbara-Start">
+        </div>
+        <div class="column">
+          <img class="pre-image" src=/assets/img/final.jpg
+            alt="Barbara-Final">
+        </div>
+      </div>
+      <!-- <p align="justify">More projects can be found <a href="/projects/">here</a>.</p> -->
   </div>
 </article>
-
-
     </div>
   </main>
 

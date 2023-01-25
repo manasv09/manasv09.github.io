@@ -21,10 +21,10 @@ This problem can be solved using SARSA, Expected-SARSA or Q-Learning. The proble
 
 - We get the following results with our approach.
 
-![task2](task2.png)
+![task2](/_pages/task2.png)
 
-![task3](task3.png)
+![task3](/_pages/task3.png)
 
-![task4](task4.png)
+![task4](/_pages/task4.png)
 
-![task5](task5.png)
+![task5](/_pages/task5.png)
